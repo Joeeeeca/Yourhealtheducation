@@ -1,0 +1,162 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 📌 Mobile-first base sizes */
+body {
+    font-size: 18px; /* Default for paragraphs */
+}
+
+/* Headings */
+h1 {
+    font-size: 26px !important;
+}
+
+h2 {
+    font-size: 24px!important;
+}
+
+h3 {
+    font-size: 22px !important;
+}
+
+p,
+a,
+button {
+    font-size: 18px !important;
+    line-height: 1.6; /* Improves readability */
+}
+
+/* 📌 Tablets (768px and up) */
+@media (min-width: 768px) {
+    h1 { font-size: 30px !important; }
+    h2 { font-size: 28px !important; }
+    h3 { font-size: 24px !important; }
+    p, a, button{ font-size: 19px !important; }
+
+}
+
+/* 📌 Laptops (1024px and up) */
+@media (min-width: 1024px) {
+    h1 { font-size: 34px !important; }
+    h2 { font-size: 30px !important; }
+    h3 { font-size: 26px !important; }
+    p, a, button { font-size: 20px !important; }
+}
+
+/* 📌 Desktops (1440px and up) */
+@media (min-width: 1440px) {
+    h1 { font-size: 38px !important; }
+    h2 { font-size: 32px !important; }
+    h3 { font-size: 28px !important; }
+    p, a, button { font-size: 21px !important; }
+}
+
+/* 📌 4K Screens (2560px and up) */
+@media (min-width: 2560px) {
+    h1 { font-size: 48px !important; }
+    h2 { font-size: 42px !important; }
+    h3 { font-size: 36px !important; }
+    p, a, button { font-size: 24px !important; }
+}
+
+/* Navbar Styling */
+.navbar {
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    background: #f1f1f1;
+}
+
+
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: #333;
+}
+
+/* Navbar Links Hover Effect */
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+/* Center Navbar Links */
+.navbar-nav {
+    text-align: center;
+}
+
+/* Ensure Navbar is Full Width */
+@media (min-width: 768px) {
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+#intro {
+    background-color: #D7E6FA;
+}
+
+#course {
+    background-color: #f6d9c7;
+}
+
+.course-link {
+    text-decoration:none;
+    color:#000;
+}
+
+.checklist {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0;
+    display: flex; /* Use flexbox for horizontal centering */
+    flex-direction: column; /* Keep items stacked vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.checklist li {
+    display: flex; /* Align checkmark with text */
+    align-items: center; /* Keep checkmark and text on the same line */
+    gap: 10px; /* Space between checkmark and text */
+}
+
+
+.checklist li::before {
+    content: '\2713'; /* Unicode checkmark (✔) */
+    color: #28a745; /* Green color */
+    font-size: 20px;
+}
+
+.btn-primary {
+    background-color: #708E55 !important;
+    border-radius: 25px;
+}
+
+#subscription-form {
+    background-color: #383938;
+    padding: 40px 20px;
+    color: white;
+}
+
+#subscription-form h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.form-control {
+    border-radius: 25px;
+    max-width:400px;
+}
+
+.btn-success {
+    border-radius: 25px;
+    background-color: #708E55 !important;
+}
+
+
+
+
+
