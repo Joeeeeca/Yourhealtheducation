@@ -28,8 +28,8 @@
             </div>
     
             <!-- Navbar Links (Collapsible on mobile) -->
-            <div class="collapse navbar-collapse w-100" id="navbarNav">
-                <ul class="navbar-nav mx-auto flex-column flex-md-row text-center text-md-start">
+            <div class="collapse navbar-collapse w-50" id="navbarNav">
+                <ul class="navbar-nav flex-column flex-md-row text-center text-md-center">
                     <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Course</a></li>
@@ -39,27 +39,31 @@
         </div>
     </nav>
 
-   <div class="container-fluid mx-auto px-3 pt-4 pb-3 text-center" id="intro">
-    <h1>Below is Mission Statement:</h1>
-    <p>Our mission is to empower men to optimize their health and well-being through comprehensive education on exercise, nutrition, and mental health. By
+   <div class="container-fluid d-flex justify-content=center align-items-center flex-column px-3 pt-4 pt-lg-3 pb-3 text-center" id="intro">
+    <h1 class="mission-title">Mission Statement:</h1>
+    <div class="mission-container">
+    <p class="text-center">Our mission is to empower men to optimize their health and well-being through comprehensive education on exercise, nutrition, and mental health. By
         providing evidence-based strategies and practical insights, we aim to inspire positive lifestyle changes that promote physical vitality, nutritional balance, and
         emotional resilience. Together, we strive to cultivate a community of men who prioritize their health and unlock their full potential for a fulfilling life.</p>
    </div>
+</div>
 
    <div class="container-fluid mx-auto px-3 px-lg-1 py-4 text-center" id="course">
-    <h2>Course</h2>
-    <a class="course-link" href="#">
-        <h3>How to be Your Own Diet Coach</h3>
-        <p>$1000</p>
-        <ul class="checklist">
-            <li>Fast track your nutrition from Beginner to Master</li>
-            <li>Confidence to adjust your diet based on your goals</li>
-            <li>Education on setting up your diet for your mental and physical performance success</li>
-            <li>Accessible online course available for you 24/7</li>
-        </ul>
-        <button class="btn btn-primary">Learn More</button>
-    </a>
-   </div>
+    <h2 class="mb-4">Courses Available</h2>
+    <div class="course-card mx-auto text-center">
+        <a class="course-link" href="#">
+            <h3>How to be Your Own Diet Coach</h3>
+            <p>$1000</p>
+            <ul class="checklist">
+                <li>Fast track your nutrition from Beginner to Master</li>
+                <li>Confidence to adjust your diet based on your goals</li>
+                <li>Education on setting up your diet for your mental and physical performance success</li>
+                <li>Accessible online course available for you 24/7</li>
+            </ul>
+            <button class="btn btn-primary">Learn More</button>
+        </a>
+    </div>
+</div>
 
 <div class="container-fluid text-center" id="subscription-form">
     <h2>Subscribe for a Free Health Ebook</h2>
