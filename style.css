@@ -258,6 +258,53 @@ button {
     background-color: #708E55 !important;
 }
 
+/*Course styling*/
+.course-container {
+    padding:50px;
+
+}
+
+.course-image {
+    width:80%;
+    border-radius:10px;
+    margin-bottom:40px;
+}
+
+@media screen and (min-width: 992px) {
+    .course-container {
+        padding: 50px 60px 60px 50px !important;
+    }  
+    .course-image {
+        width:100%;
+        border-radius:20px;
+        margin-bottom:0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .course-container {
+        padding: 70px 40px 50px 40px !important;
+    }  
+    .course-image {
+        border-radius:30px;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .course-container {
+        padding: 80px 80px 60px 80px !important;
+    }  
+}
+@media screen and (min-width: 1400px) {
+    .course-container {
+        padding: 80px 120px 60px 120px !important;
+    }  
+    .course-image {
+        border-radius:30px;
+        width:70%;
+    }
+}
+
+
 
 
 
