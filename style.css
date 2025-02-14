@@ -192,10 +192,10 @@ button {
 
 .course-card {
     background: #f8ddd0;
-    padding: 25px;
     border-radius:8px;
+    padding:25px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    max-width:600px;
+    max-width:800px;
     color:#000;
     transition:transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -303,6 +303,85 @@ button {
         width:70%;
     }
 }
+
+.books-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 15px;
+    scrollbar-width: thin;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.book-item {
+    flex: 0 0 calc(100% / 7 - 10px) !important; /* Adjust for 7 books */
+    text-align: center;
+    margin: 10px;
+    font-family: "Inter", serif;
+}
+
+.book-item:first-child {
+    margin-left: 0;
+}
+
+.book-item img {
+   max-width: 100%;
+   height: auto;
+}
+
+.book-title {
+    display: block;                /* Allow block display for normal flow */
+    overflow: hidden;              /* Hide overflowed text */
+    text-overflow: ellipsis;       /* Show ellipses for overflow text */
+    width: 200px;                  /* Width constraint */
+    font-size: 20px;               /* Font size */
+    line-height: 1.5;              /* Line height */
+    margin: 10px auto;             /* Center alignment */
+    color: #333;                   /* Text color */
+    white-space: normal;           /* Allow text to wrap */
+    height: 3em;                   /* Restrict height to 2 lines */
+    display: -webkit-box;          /* Webkit box for line clamp */
+    -webkit-box-orient: vertical;  /* Vertical box orientation */
+    -webkit-line-clamp: 2;         /* Clamp to 2 lines */
+}
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+
+    .book-item img {
+        max-width: 80%;
+    }
+}
+
+/* For larger screens like 1200px and above */
+@media screen and (min-width: 1200px) {
+    .books-container {
+        overflow-x: auto; /* Enable horizontal scrolling */
+        justify-content: flex-start; /* Align books to the start */
+        flex-wrap: nowrap; /* Prevent wrapping of items */
+        width: 100%; /* Ensure container takes full width */
+    }
+
+    .book-item {
+        flex: 0 0 calc(100% / 7 - 10px) !important; /* Adjust for 7 books */
+        margin: 0 10px; /* Adjust the margins */
+    }
+}
+
+/* For extra large screens (1400px and above) */
+@media screen and (min-width: 1400px) {
+    .books-container {
+        overflow-x: auto; /* Keep horizontal scrolling */
+    }
+
+    .book-item {
+        flex: 0 0 calc(100% / 7 - 50px) !important; /* Adjust for 7 books */
+        margin: 0 20px; /* Adjust margins as needed */
+    }
+}
+
+
 
 
 
