@@ -304,6 +304,39 @@ button {
     }
 }
 
+.mouse-image {
+    width: 10%;
+    display: block;
+    margin: 20px auto;
+    position: absolute;
+    right: 40%;
+    top: 86%; /* Start lower */
+}
+
+@media screen and (max-width:1399px) {
+@keyframes moveUp {
+    0% { transform: translateY(30px); opacity: 0; } /* Start lower */
+    100% { transform: translateY(0); opacity: 1; }  /* Move up */
+}
+
+@keyframes moveLeftRight {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-50px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes moveDown {
+    0% { transform: translateY(0px); opacity: 1; }
+    100% { transform: translateY(30px); opacity: 0; }
+}
+}
+
+@media screen and (min-width:1400px) {
+    .mouse-image {
+        display:none;
+    }
+}
+
 .books-container {
     display: flex;
     overflow-x: auto;
@@ -313,6 +346,8 @@ button {
     padding: 10px 0;
     width: 100%;
 }
+
+
 
 .book-item {
     flex: 0 0 calc(100% / 7 - 10px) !important; /* Adjust for 7 books */
