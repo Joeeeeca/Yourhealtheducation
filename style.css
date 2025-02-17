@@ -304,13 +304,22 @@ button {
     }
 }
 
+.moveable-container {
+    position: relative;  /* Allows absolute positioning of child elements */
+    display: flex;       /* Keeps the books in a row */
+    justify-content: center;  /* Centers the flex items */
+    align-items: center; /* Center align the content (if needed) */
+    width: 100%;         /* Ensures the container takes up the full width */
+    height: auto;        /* Adjust as needed for proper layout */
+}
+
 .mouse-image {
-    width: 10%;
-    display: block;
-    margin: 20px auto;
-    position: absolute;
-    right: 40%;
-    top: 86%; /* Start lower */
+    width: 15%;
+    position: absolute;  /* Removes the image from the flex layout */
+    top:35%;            /* Center it vertically */
+    right: 10%;          /* Adjust as necessary to position it correctly */
+    transform: translateY(-50%); /* Ensures the image is vertically centered */
+    z-index: 99;         /* Ensure it stays on top of other elements */
 }
 
 @media screen and (max-width:1399px) {
@@ -339,6 +348,7 @@ button {
 
 .books-container {
     display: flex;
+    position:relative;
     overflow-x: auto;
     white-space: nowrap;
     gap: 15px;
