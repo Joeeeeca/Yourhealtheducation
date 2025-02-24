@@ -49,11 +49,11 @@
         </div>
     </div>
 
-    <div class="container-fluid container text-center">
+    <div class="container-fluid text-center">
         <h3 class="mb-4">Recommended Books</h3>
         <div class="books-container">
 
-            <div class="d-flex flex-nowrap justify-content-start justify-content-lg-center moveable-container">
+            <div class="d-flex flex-nowrap justify-content-start justify-content-xxl-center  moveable-container">
                 <img class="mouse-image" src="Untitled-1.png">
                 <div class="book-item">
                     <img src="book 1.jpg" alt="Book 1">
@@ -92,28 +92,45 @@
 
 
     <script>
- window.onload = function () {
+document.addEventListener("DOMContentLoaded", function () {
     let moveUpDuration = 0.8; // Move up faster (0.8s)
     let moveLeftRightDuration = 2; // Left-right movement
     let moveDownDuration = 0.8;
 
     let image = document.querySelector(".mouse-image");
     let container = document.querySelector(".moveable-container");
+    let booksContainer = document.querySelector(".books-container");
 
-    // Step 1: Move the image up
-    image.style.animation = `moveUp ${moveUpDuration}s ease-in-out forwards`;
+    // Create an Intersection Observer
+    let observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Step 1: Move the image up
+                    image.style.animation = `moveUp ${moveUpDuration}s ease-in-out forwards`;
 
-    // Step 2: After move up completes, start left-right animation
-    setTimeout(() => {
-        image.style.animation = `moveLeftRight ${moveLeftRightDuration}s ease-in-out forwards`;
-        container.style.animation = `moveLeftRight ${moveLeftRightDuration}s ease-in-out forwards`;
+                    // Step 2: After move up completes, start left-right animation
+                    setTimeout(() => {
+                        image.style.animation = `moveLeftRight ${moveLeftRightDuration}s ease-in-out forwards`;
+                        container.style.animation = `moveLeftRight ${moveLeftRightDuration}s ease-in-out forwards`;
 
-        // Step 3: Move the image down after left-right animation completes
-        setTimeout(() => {
-            image.style.animation = `moveDown ${moveDownDuration}s ease-in-out forwards`;
-        }, moveLeftRightDuration * 1000);
-    }, moveUpDuration * 1000);
-};
+                        // Step 3: Move the image down after left-right animation completes
+                        setTimeout(() => {
+                            image.style.animation = `moveDown ${moveDownDuration}s ease-in-out forwards`;
+                        }, moveLeftRightDuration * 1000);
+                    }, moveUpDuration * 1000);
+
+                    // Stop observing after animation starts
+                    observer.unobserve(booksContainer);
+                }
+            });
+        },
+        { threshold: 0.3 } // Trigger when 30% of the booksContainer is visible
+    );
+
+    observer.observe(booksContainer);
+});
+
     </script>
     
 </body>
