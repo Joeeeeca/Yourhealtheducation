@@ -400,7 +400,7 @@ button {
 }
 
 /* For larger screens like 1200px and above */
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1399px) {
     .books-container {
         overflow-x: auto; /* Enable horizontal scrolling */
         justify-content: flex-start; /* Align books to the start */
@@ -415,15 +415,85 @@ button {
 }
 
 /* For extra large screens (1400px and above) */
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1920px) {
     .books-container {
-        overflow-x: auto; /* Keep horizontal scrolling */
+        overflow-x: hidden; /* Keep horizontal scrolling */
     }
 
     .book-item {
         flex: 0 0 calc(100% / 7 - 50px) !important; /* Adjust for 7 books */
         margin: 0 20px; /* Adjust margins as needed */
     }
+}
+
+/*About Me*/
+
+.about-container {
+    display: flex;
+    flex-direction: column; /* Default: Stacked layout */
+    align-items: center; /* Center content */
+    text-align: center;
+    padding: 20px;
+    min-height: calc(100vh - 70px);
+}
+
+.about-image img {
+    width: 80%; /* Adjust as needed */
+    max-width: 400px;
+    border-radius: 10px; /* Soft rounded corners */
+    margin-top: 20px;
+}
+
+.about-text {
+    padding:0 20px;
+}
+
+@media screen and (min-width:992px) and (max-width:1199px) {
+    .about-text {
+        padding:0 40px;
+    }
+
+}
+/* For larger screens, switch layout */
+@media screen and (min-width: 1200px) {
+    .about-container {
+        flex-direction: row; /* Side-by-side layout */
+        align-items: center;
+        text-align: left;
+        min-height:calc(100vh - 150px);
+    }
+
+    .about-text {
+        flex: 1;
+        padding-right: 20px; /* Adds spacing between text and image */
+    }
+
+    .about-image {
+        flex: 0 0 40%;
+        max-width:40%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width:1920px) {
+    .about-image {
+        flex:0 0 30%;
+        max-width:30%;
+    }
+.about-image img {
+    max-width:500px;
+}
+
+.about-text {
+    text-align: center;
+    padding:0 80px;
+}
 }
 
 
